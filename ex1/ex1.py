@@ -110,3 +110,13 @@ c = 90
 r_color, g_color, b_color = im_org[r,c]
 print(r_color, g_color, b_color)
 
+# EXERCISE 16
+rows = im_org.shape[0]
+r_2 = int(rows/2)
+
+im_org[:r_2, :, 0] = 0  
+im_org[:r_2, :, 1] = 255
+im_org[:r_2, :, 2] = 0  
+
+io.imshow(im_org)
+io.show()
