@@ -1,4 +1,4 @@
-from skimage import color, io, measure, img_as_ubyte # type: ignore
+from skimage import color, io, measure, img_as_ubyte  # type: ignore
 from skimage.measure import profile_line
 from skimage.transform import rescale, resize
 import matplotlib.pyplot as plt
@@ -16,8 +16,8 @@ im_org = io.imread(in_dir + im_name)
 # io.show()
 
 # Mask
-thereshold = 130
-im_mask = im_org > thereshold
+threshold = 130
+im_mask = im_org > threshold
 
 # Show mask and histogram together
 fig, ax = plt.subplots(1, 2)
@@ -44,10 +44,3 @@ io.show()
 
 # Save the mask
 io.imsave(in_dir + "metacarpals_mask.png", im_mask_color)
-
-
-
-
-
-
-

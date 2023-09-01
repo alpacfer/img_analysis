@@ -1,4 +1,4 @@
-from skimage import color, io, measure, img_as_ubyte # type: ignore
+from skimage import color, io, measure, img_as_ubyte  # type: ignore
 from skimage.measure import profile_line
 from skimage.transform import rescale, resize
 import matplotlib.pyplot as plt
@@ -31,11 +31,6 @@ ll = 200
 im_crop = im_gray[40:40 + ll, 150:150 + ll]
 xx, yy = np.mgrid[0:im_crop.shape[0], 0:im_crop.shape[1]]
 fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
-surf = ax.plot_surface(xx, yy, im_crop, rstride=1, cstride=1, cmap=plt.cm.jet, linewidth=0) # type: ignore
+surf = ax.plot_surface(xx, yy, im_crop, rstride=1, cstride=1, cmap=plt.cm.jet, linewidth=0)  # type: ignore
 fig.colorbar(surf, shrink=0.5, aspect=5)
 plt.show()
-
-
-
-
-
