@@ -40,3 +40,25 @@ plt.ylim([0, 1])
 plt.show()
 
 # Project data on first principal component
+pc_proj = eig_vec.T.dot(data.T)
+
+# Pairplot of projected data
+plt.figure()
+d = pd.DataFrame(pc_proj.T, columns=["PC1", "PC2", "PC3", "PC4"])
+sns.pairplot(d)
+plt.show()
+
+# Direct PCA with sklearn
+from sklearn import decomposition
+
+pca = decomposition.PCA()
+pca.fit(x)
+values_pca = pca.explained_variance_
+exp_var_ratio = pca.explained_variance_ratio_
+vectors_pca = pca.components_
+data_transform = pca.transform(data)
+# Show pairplot of transformed data
+plt.figure()
+d = pd.DataFrame(data_transform, columns=["PC1", "PC2", "PC3", "PC4"])
+sns.pairplot(d)
+plt.show()

@@ -17,9 +17,14 @@ plt.ylabel('Intensity')
 plt.xlabel('Distance along line')
 plt.show()
 
-# Show in the image the start and end points of the line
-plt.imshow(im_org)
-plt.plot([342, 77], [320, 160], 'ro-')
+# Show the profile line on the image
+plt.figure()
+plt.imshow(im_org, cmap='gray')
+# Plot the profile line (source and distination points)
+plt.plot(77, 342, 'ro')
+plt.plot(160, 320, 'ro')
+# Plot the profile line
+plt.plot([77, 160], [342, 320], 'r-')
 plt.show()
 
 # Landscape view
