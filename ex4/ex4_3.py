@@ -109,6 +109,7 @@ ax[0].imshow(synth_cat_minus_img)
 ax[1].imshow(avg_cat_img)
 ax[2].imshow(synth_cat_plus_img)
 plt.show()
-
+# First component explains eye color
+# Second component explains skin color
 
 
