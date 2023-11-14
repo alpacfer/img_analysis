@@ -1,4 +1,4 @@
-from skimage import color, io, measure, img_as_ubyte
+from skimage import color, io, measure, img_as_ubyte # type: ignore
 from skimage.util import img_as_ubyte
 from skimage.util import img_as_float
 import skimage
